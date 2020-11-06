@@ -50,9 +50,9 @@ namespace TravisCILab
         [Test]
         public void sub_Null()
         {
-            Assert.Throws<FormatException>(() => Program.Subtract("1", null));
-            Assert.Throws<FormatException>(() => Program.Subtract(null, "1"));
-            Assert.Throws<FormatException>(() => Program.Subtract(null, null));
+            Assert.Throws<ArgumentNullException>(() => Program.Subtract("1", null));
+            Assert.Throws<ArgumentNullException>(() => Program.Subtract(null, "1"));
+            Assert.Throws<ArgumentNullException>(() => Program.Subtract(null, null));
         }
     }
 }
