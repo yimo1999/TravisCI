@@ -31,5 +31,12 @@ namespace TravisCILab
         }
 
         // Implement 3 tests per operation, following a similar pattern as above
+        [Test]
+        public void sub_Invalid()
+        {
+            Assert.Throws<FormatException>(() => Program.Subtract("1", "1"));
+            Assert.Throws<FormatException>(() => Program.Subtract("a", "1"));
+            Assert.Throws<FormatException>(() => Program.Subtract("a", "a"));
+        }
     }
 }
