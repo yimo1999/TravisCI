@@ -39,20 +39,5 @@ namespace TravisCILab
             Assert.AreEqual(2, Program.Subtract("7", "5"));
         }
 
-        [Test]
-        public void sub_Invalid()
-        {
-            Assert.Throws<FormatException>(() => Program.Subtract("1", "a"));
-            Assert.Throws<FormatException>(() => Program.Subtract("a", "1"));
-            Assert.Throws<FormatException>(() => Program.Subtract("a", "a"));
-        }
-        
-        [Test]
-        public void sub_Null()
-        {
-            Assert.Throws<ArgumentNullException>(() => Program.Subtract("1", null));
-            Assert.Throws<ArgumentNullException>(() => Program.Subtract(null, "1"));
-            Assert.Throws<ArgumentNullException>(() => Program.Subtract(null, null));
-        }
     }
 }
